@@ -15,7 +15,7 @@ def password_checker(password_input:str):
     has_Lowercase:bool=any(char.islower() for char in password_input)
     has_numbers:bool= any(char.isdigit()for char in password_input)
     has_specialchar:bool=any(char.isalnum()for char in password_input)
-    criteria: int =sum(length+has_Lowercase+has_numbers+has_specialchar+has_Uppercase)
+    criteria:int =sum([length+has_Lowercase+has_numbers+has_specialchar+has_Uppercase])
     if criteria==5:
         return "strong"
     elif criteria ==4:
